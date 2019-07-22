@@ -31,7 +31,8 @@ console.log (props)
 function MovieDetails({ movie }) {
   const { title, director, metascore, stars } = movie;
   return (
-    <Link to=  '/movies/:id' className="movie-card">
+    <Link to=  '/movies/:id' >
+    <div className="movie-card">
       <h2>{title}</h2>
       <div className="movie-director">
         Director: <em>{director}</em>
@@ -45,7 +46,9 @@ function MovieDetails({ movie }) {
         <div key={star} className="movie-star">
           {star}
         </div>
+
       ))}
+    </div>
     </Link>
   );
 }
