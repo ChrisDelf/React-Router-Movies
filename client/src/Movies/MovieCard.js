@@ -1,13 +1,12 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 const MovieCard = props => {
-console.log("Props in MoviceCard", props.movie)
 const{ title, director, metascore, stars} = props.movie;
 
 
+console.log("In card", props.movie.id)
 
-
-  return (   <Link to=  '/movies/:id' >
+  return (   <Link to={ `/movies/${props.movie.id}`}>
     <div className="movie-card">
       <h2>{title}</h2>
       <div className="movie-director">
@@ -17,7 +16,6 @@ const{ title, director, metascore, stars} = props.movie;
         Metascore: <strong>{metascore}</strong>
       </div>
       <h3>Actors</h3>
-
       {stars.map(star => (
         <div key={star} className="movie-star">
           {star}

@@ -22,7 +22,8 @@ const MovieList = props => {
 
   return (
     <div className="movie-list">
-      {movies.map(movie => (
+    {movies.map(movie => (
+
         <MovieDetails key={movie.id} movie={movie} />
       ))}
     </div>
@@ -30,7 +31,7 @@ const MovieList = props => {
 }
 
 function MovieDetails({ movie }) {
-console.log('MovieDetailes', movie)
+console.log('MovieDetailes', movie.id)
   return (
     <MovieCard key = {movie.id} movie ={movie}/>
   );
