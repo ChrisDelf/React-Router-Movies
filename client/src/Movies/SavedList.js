@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link, Route} from 'react-router-dom';
+import {Link, Route, NavLink} from 'react-router-dom';
 import MovieCard from './MovieCard';
 import Movie from './Movie';
 const SavedList = props => {
@@ -12,7 +12,7 @@ const SavedList = props => {
   <div className="saved-list">
     <h3>Saved Movies:</h3>
     {props.list.map(movie  => (
-      <Link to = {`/movies/${movie.id}`}>
+      <Link to = {`/movies/${movie.id}`} key = {movie.id}>
 
       <span className="saved-movie" key = {movie.id}>{movie.title}</span>
       </Link>
