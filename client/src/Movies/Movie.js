@@ -36,8 +36,7 @@ const Movie = props => {
     return <div>Loading movie information...</div>;
   }
 
-  const { title, director, metascore, stars } = movie;
-  return (
+   return (
     <div className="save-wrapper">
     <MovieCard key={movie.id} movie={movie} />
 
