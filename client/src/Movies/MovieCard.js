@@ -3,8 +3,6 @@ import { Link, NavLink } from 'react-router-dom';
 const MovieCard = props => {
   const { title, director, metascore, stars } = props.movie;
 
-
-
   return (
     <NavLink to={`/movies/${props.movie.id}`}>
       <div className="movie-card">
