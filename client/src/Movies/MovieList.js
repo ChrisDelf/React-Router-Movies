@@ -31,7 +31,7 @@ const MovieList = props => {
 }
 
 function MovieDetails({ movie }) {
-console.log('MovieDetailes', movie.id)
+
   return (
     <MovieCard key = {movie.id} movie ={movie}/>
   );

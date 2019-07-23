@@ -28,7 +28,7 @@ const Movie = props => {
   //Uncomment this only when you have moved on to the stretch goals
   const saveMovie = () => {
     const addToSavedList = props.addToSavedList;
-    console.log("SavedMovie", movie)
+
     addToSavedList(movie)
   }
 
@@ -37,7 +37,6 @@ const Movie = props => {
   }
 
   const { title, director, metascore, stars } = movie;
-  console.log("Movie", movie)
   return (
     <div className="save-wrapper">
     <MovieCard key={movie.id} movie={movie} />
